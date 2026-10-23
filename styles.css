@@ -61,3 +61,21 @@ main,section,.hero,.section,.future,.partner-strip,footer{min-width:0}
  .hero-inner{padding-left:6%;padding-right:6%}
  .overline{letter-spacing:1.3px}
 }
+
+/* Mobile hero v3: explicit line grouping, no clipped typography */
+.hero-title-first,.hero-title-second{display:block}
+.hero-title-second{color:var(--lime)}
+.hero h1{letter-spacing:-.06em}
+@media(max-width:680px){
+ .hero-inner{padding-top:150px;padding-bottom:95px}
+ .hero h1{font-size:clamp(35px,9.2vw,49px);line-height:1.12;letter-spacing:-.065em;max-width:100%;text-wrap:nowrap}
+ .hero-title-first,.hero-title-second{display:block;white-space:nowrap}
+ .hero-copy{max-width:100%;font-size:15px;line-height:1.7}
+ .actions{gap:18px}
+ .actions .btn{border-radius:9px}
+ .actions .link-light{white-space:nowrap}
+ .eyebrow{font-size:10px;letter-spacing:1.5px;margin-bottom:36px}
+}
+@media(max-width:360px){
+ .hero h1{font-size:clamp(32px,9vw,38px)}
+}
